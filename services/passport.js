@@ -22,7 +22,8 @@ passport.use(
 		{
 			clientID: keys.googleClientID,
 			clientSecret: keys.googleClientSecret,
-			callbackURL: 'http://my-emailer.herokuapp.com/auth/google/callback'
+			callbackURL: '/auth/google/callback',
+			proxy: true
 		},
 		(accessToken, refreshToken, profile, done) => {
 			// checking if the user logged in exists or not
